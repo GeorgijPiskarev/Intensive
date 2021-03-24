@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="web.UserTest" time="2.093" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="web.UserTest" time="0.654" tests="7" errors="0" skipped="7" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\3D6B~1\AppData\Local\Temp\surefire1842324884230699365\surefirebooter861435365639670014.jar C:\Users\Георгий\AppData\Local\Temp\surefire1842324884230699365 2021-03-24T06-39-57_465-jvmRun1 surefire3574601776140203063tmp surefire_07229908263683601614tmp"/>
+    <property name="sun.java.command" value="C:\Users\3D6B~1\AppData\Local\Temp\surefire1938574269081014434\surefirebooter5978454893208980268.jar C:\Users\Георгий\AppData\Local\Temp\surefire1938574269081014434 2021-03-25T00-59-16_278-jvmRun1 surefire2187121181661085423tmp surefire_02726260847535298194tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\Георгий\Desktop\intensive\target\test-classes;C:\Users\Георгий\Desktop\intensive\target\classes;C:\Users\Георгий\.m2\repository\org\springframework\spring-context\5.2.9.RELEASE\spring-context-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-aop\5.2.9.RELEASE\spring-aop-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-beans\5.2.9.RELEASE\spring-beans-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-core\5.2.9.RELEASE\spring-core-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-jcl\5.2.9.RELEASE\spring-jcl-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-expression\5.2.9.RELEASE\spring-expression-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-jdbc\5.2.9.RELEASE\spring-jdbc-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-tx\5.2.9.RELEASE\spring-tx-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\postgresql\postgresql\42.2.17\postgresql-42.2.17.jar;C:\Users\Георгий\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Георгий\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\Георгий\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar;C:\Users\Георгий\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Георгий\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Георгий\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\Георгий\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Георгий\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Георгий\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Георгий\.m2\repository\org\springframework\spring-test\5.2.9.RELEASE\spring-test-5.2.9.RELEASE.jar;C:\Users\Георгий\.m2\repository\org\assertj\assertj-core\3.17.2\assertj-core-3.17.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Георгий"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\3D6B~1\AppData\Local\Temp\surefire1842324884230699365\surefirebooter861435365639670014.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\3D6B~1\AppData\Local\Temp\surefire1938574269081014434\surefirebooter5978454893208980268.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_211\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,11 +61,30 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="create" classname="web.UserTest" time="0.82"/>
-  <testcase name="delete" classname="web.UserTest" time="0.146"/>
-  <testcase name="getAll" classname="web.UserTest" time="0.097"/>
-  <testcase name="update" classname="web.UserTest" time="0.141"/>
-  <testcase name="getNotFound" classname="web.UserTest" time="0.09"/>
-  <testcase name="get" classname="web.UserTest" time="0.21"/>
-  <testcase name="deletedNotFound" classname="web.UserTest" time="0.102"/>
+  <testcase name="create" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.create() is @Disabled"/>
+    <system-err><![CDATA[мар 25, 2021 12:59:17 AM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+мар 25, 2021 12:59:17 AM org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+INFO: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@75f32542, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7f1302d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@43ee72e6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23529fee, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fe767f3, org.springframework.test.context.event.EventPublishingTestExecutionListener@2805c96b]
+]]></system-err>
+  </testcase>
+  <testcase name="delete" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.delete() is @Disabled"/>
+  </testcase>
+  <testcase name="getAll" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.getAll() is @Disabled"/>
+  </testcase>
+  <testcase name="update" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.update() is @Disabled"/>
+  </testcase>
+  <testcase name="getNotFound" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.getNotFound() is @Disabled"/>
+  </testcase>
+  <testcase name="get" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.get() is @Disabled"/>
+  </testcase>
+  <testcase name="deletedNotFound" classname="web.UserTest" time="0">
+    <skipped message="public void web.UserTest.deletedNotFound() is @Disabled"/>
+  </testcase>
 </testsuite>

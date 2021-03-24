@@ -29,7 +29,7 @@
     </properties>
 
     <build>
-        <finalName>Names</finalName>
+        <finalName>Intensive</finalName>
         <defaultGoal>package</defaultGoal>
         <plugins>
             <plugin>

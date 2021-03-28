@@ -4,11 +4,22 @@
          xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/security https://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http/>
+    <http auto-config="true">
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+        <logout/>
+    </http>
+    <b:bean id="bcryptBean" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <b:constructor-arg name="strength" value="12"/>
+    </b:bean>
 
-
-    <user-service>
-        <user name="user" password="{noop}password" authorities="ROLE_USER"/>
-    </user-service>
+    <authentication-manager>
+        <authentication-provider>
+            <password-encoder ref="bcryptBean"/>
+            <user-service>
+                <user name="user" password="$2a$12$x0gRqdkZvaxAz8q9ORB9SOCWbGoSoTufquPbKIWO0iy8VLfDH.gWK"
+                      authorities="ROLE_USER"/>
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
 
 </b:beans>

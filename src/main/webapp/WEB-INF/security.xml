@@ -4,10 +4,9 @@
          xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/security https://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http pattern="/resources/**" security="none"/>
     <http auto-config="true">
         <intercept-url pattern="/users/**" access="hasRole('ROLE_USER')"/>
-        <logout/>
+        <csrf disabled="true"/>
     </http>
     <b:bean id="bcryptBean" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
         <b:constructor-arg name="strength" value="12"/>

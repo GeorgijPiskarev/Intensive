@@ -6,6 +6,7 @@
 
     <http auto-config="true">
         <intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/**" access="isAuthenticated()"/>
         <logout/>
     </http>
     <b:bean id="bcryptBean" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">

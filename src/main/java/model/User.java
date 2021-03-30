@@ -3,17 +3,35 @@ package model;
 
 import org.springframework.util.Assert;
 
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
+@Entity
+@Table(name = "users")
 public class User {
     public static final int START_SEQ = 100000;
 
+    @Id
+    @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = START_SEQ)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
     private Integer id;
 
+    @Column(name = "name")
+    @NotBlank
+    @Size(min = 2, max = 20)
     private String name;
 
+    @Column(name = "email", nullable = false, unique = true)
+    @Email
+    @NotBlank
     private String email;
 
+    @Column(name = "password", nullable = false)
+    @NotBlank
+    @Size(min = 6, max = 20)
     private String password;
 
     public User() {

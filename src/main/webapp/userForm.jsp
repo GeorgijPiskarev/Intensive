@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <html>
 <head>
@@ -13,6 +14,7 @@
     <h2>User</h2>
     <jsp:useBean id="user" type="model.User" scope="request"/>
     <form method="post" action="users">
+        <sec:csrfInput />
         <input type="hidden" name="id" value="${user.id}">
         <dl>
             <dt>Name:</dt>

@@ -4,22 +4,32 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <display-name>intensive</display-name>
-
-    <servlet>
-        <servlet-name>userServlet</servlet-name>
-        <servlet-class>web.UserServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>userServlet</servlet-name>
-        <url-pattern>/users</url-pattern>
-    </servlet-mapping>
+<display-name>intensive</display-name>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/security.xml</param-value>
+        <param-value>
+            classpath:spring/security.xml
+        </param-value>
     </context-param>
+
+    <!-- Spring MVC -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-app.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>
@@ -29,9 +39,5 @@
         <filter-name>springSecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 
 </web-app>

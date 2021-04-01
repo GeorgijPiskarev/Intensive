@@ -10,8 +10,19 @@
     <mvc:annotation-driven/>
 
     <!--  Swagger2  https://medium.com/@andreymamontov/swagger-2-configuration-with-spring-xml-3cd643a12425 -->
-    <bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration"/>
-    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <bean id="swagger2Config"
+          class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration">
+    </bean>
+
+    <mvc:resources order="1" location="classpath:/META-INF/resources/" mapping="/resources/**" />
+    <mvc:resources mapping="swagger-ui.html"
+                   location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**"
+                   location="classpath:/META-INF/resources/webjars/" />
+
+    <mvc:default-servlet-handler />
+
+    <context:component-scan base-package="web.users"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="WEB-INF/jsp"

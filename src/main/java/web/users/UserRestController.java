@@ -13,7 +13,6 @@ import java.net.URI;
 import java.util.List;
 
 import static util.Validation.assureIdConsistent;
-import static util.Validation.checkNotFoundWithId;
 
 @RestController
 @RequestMapping(value = UserRestController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -30,7 +29,7 @@ public class UserRestController {
 
     @GetMapping("/{id}")
     public User get(@PathVariable int id) {
-        return checkNotFoundWithId(repository.get(id), id);
+        return repository.get(id);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)

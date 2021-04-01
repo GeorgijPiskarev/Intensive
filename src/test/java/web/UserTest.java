@@ -1,14 +1,13 @@
 package web;
 
 import model.User;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import repository.UserRepository;
-import repository.UserRepositoryImpl;
 import util.NotFoundException;
 
 import java.util.Arrays;
@@ -39,8 +38,8 @@ public class UserTest {
 
     @Test
     public void delete() {
-    repository.delete(FIRST_ID);
-       assertThrows(NotFoundException.class, () -> repository.get(FIRST_ID));
+        repository.delete(FIRST_ID);
+        assertThrows(NotFoundException.class, () -> repository.get(FIRST_ID));
     }
 
     @Test
@@ -55,10 +54,12 @@ public class UserTest {
     }
 
     @Test
-    public void getNotFound() { assertThrows(NotFoundException.class, () -> repository.get(NOT_FOUND)); }
+    public void getNotFound() {
+        assertThrows(NotFoundException.class, () -> repository.get(NOT_FOUND));
+    }
 
     @Test
-   public void update() {
+    public void update() {
         User updated = getUpdated();
         repository.save(updated);
         assertThat(repository.get(FIRST_ID)).isEqualTo(updated);

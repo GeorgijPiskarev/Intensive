@@ -14,13 +14,13 @@
           class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration">
     </bean>
 
-    <mvc:resources order="1" location="classpath:/META-INF/resources/" mapping="/resources/**" />
+    <mvc:resources order="1" location="classpath:/META-INF/resources/" mapping="/resources/**"/>
     <mvc:resources mapping="swagger-ui.html"
-                   location="classpath:/META-INF/resources/" />
+                   location="classpath:/META-INF/resources/"/>
     <mvc:resources mapping="/webjars/**"
-                   location="classpath:/META-INF/resources/webjars/" />
+                   location="classpath:/META-INF/resources/webjars/"/>
 
-    <mvc:default-servlet-handler />
+    <mvc:default-servlet-handler/>
 
     <context:component-scan base-package="web.users"/>
 

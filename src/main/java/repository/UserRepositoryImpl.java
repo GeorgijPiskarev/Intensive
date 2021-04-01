@@ -8,6 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+import static util.Validation.checkNotFoundWithId;
+
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
@@ -27,15 +29,15 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     @Transactional
-    public boolean delete(int id) {
-        return em.createQuery("DELETE FROM User u WHERE u.id=:id")
+    public void delete(int id) {
+        checkNotFoundWithId(em.createQuery("DELETE FROM User u WHERE u.id=:id")
                 .setParameter("id", id)
-                .executeUpdate() != 0;
+                .executeUpdate() != 0, id);
     }
 
     @Override
     public User get(int id) {
-        return em.find(User.class, id);
+        return checkNotFoundWithId(em.find(User.class, id), id);
     }
 
     @Override
